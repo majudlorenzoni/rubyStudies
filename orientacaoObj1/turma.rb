@@ -1,17 +1,17 @@
 class Turma
-  attr_accessor :alunos, :nome
+attr_reader :alunos
+attr_accessor :nome
 
-  def initialize(nome, alunos = [])
-    @nome = nome
-    @alunos = []
-  end
+def initialize(nome)
+  @nome = nome
+  @alunos = []
+end
 
-  def adiciona_aluno(aluno)
-    @alunos << aluno
-  end
+def adiciona_aluno(aluno)
+  @alunos << aluno
+end
 
-  def total_alunos
-    @alunos.size
-    puts "Total de alunos: #{@alunos.size}"
-  end
+private
+
+attr_writer :alunos
 end 
